@@ -127,7 +127,27 @@ def sort(conts):
     return conts
 
 ```
+6.Add black border to each digit, this increases the accuracy of classification
+```python
+h, w = im.size
+newH = w // 2 - h // 2
+imgEmpty = Image.new('L', (w, w), 0)
+imgEmpty.paste(im, (newH, 0))
+imageResize = imgEmpty.resize((28, 28), Image.ANTIALIAS)
+***
+def imageprepare(path):
+    res=[]
+    file_list=os.listdir(path)
+    file_list.sort()
+    file_name=[path+"/"+i for i in file_list]
+    for n in file_name:
+        im = Image.open(n).convert('L')
+        tv = list(im.getdata())
+        tva = [(255-x)*1.0/255.0 for x in tv]
+        res.append(tva)
+    return res
 
+```
 ![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/5.png)
 
 ![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/6.png)
