@@ -6,8 +6,8 @@ from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score,recall_score,precision_score,f1_score
 
 if __name__=='__main__':
-    pddata_train=pd.read_csv('/home/sam/Documents/LearningPython/SVM/14、SVM实践/14.SVM/14.optdigits.tra',header=None)
-    pddata_test=pd.read_csv('/home/sam/Documents/LearningPython/SVM/14、SVM实践/14.SVM/14.optdigits.tes',header=None)
+    pddata_train=pd.read_csv('.....',header=None)
+    pddata_test=pd.read_csv('......',header=None)
     x_train=pddata_train.loc[:,pddata_train.columns!=64]
     y_train=pddata_train.loc[:,pddata_train.columns==64]
 
