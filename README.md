@@ -3,6 +3,18 @@ In this work we focused on two classifiers.Convolutional Neural Network(CNN) and
 
 ## HandWritten Multi-digit String Segmentation
 Usually, the recognition of the segmented digits is an easier task compared to segmentation and recognition of a multi-digit string.  In this work, we will use opencv  segment a handwritten multi-digit string image and recognize the segmented digits.
+
+## Requirements:
+1.Numpy==1.12.1
+2.tensorflow==1.4.0
+3.Opencv
+4.Python==3.5
+5.Pillow==5.0.0
+6.Sklearn
+7.PyMySQL==0.7.10
+8.MySQl
+9.opencv_python=3.3.0
+
 ## Steps:
 1.load image
 ``img=cv.read(path)``
