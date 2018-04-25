@@ -105,3 +105,7 @@ def sort(conts):
     return conts
 
 ```
+
+![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/5.png)
+
+![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/6.png)
