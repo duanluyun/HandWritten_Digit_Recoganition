@@ -7,8 +7,7 @@ Usually, the recognition of the segmented digits is an easier task compared to s
 1.load image
 ``img=cv.read(path)``
 
-![the source image](/home/sam/Desktop/DeepinScreenshot_select-area_20180425185447.png)
-
+![Alt text](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/1.png)
 
 2.preprocessint the image
 
