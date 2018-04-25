@@ -6,13 +6,21 @@ Usually, the recognition of the segmented digits is an easier task compared to s
 
 ## Requirements:
 1.Numpy==1.12.1
+
 2.tensorflow==1.4.0
+
 3.Opencv
+
 4.Python==3.5
+
 5.Pillow==5.0.0
+
 6.Sklearn
+
 7.PyMySQL==0.7.10
+
 8.MySQl
+
 9.opencv_python=3.3.0
 
 ## Steps:
