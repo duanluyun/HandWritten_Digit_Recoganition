@@ -7,7 +7,7 @@ Usually, the recognition of the segmented digits is an easier task compared to s
 1.load image
 ``img=cv.read(path)``
 
-![Alt text](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/1.png)
+![Source Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/1.png)
 
 2.preprocessint the image
 
@@ -16,6 +16,8 @@ Assigning each pixel to a value of the range of monochromatic shades from black 
 
 (2)Binarise image:
 Assigning each pixel to only two possible colors typically black and white.
+
+![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/2.png)
 
 ```python
 def preprocessing(img):
@@ -46,7 +48,7 @@ def annotate_contour(img,thres):
     k = cv.waitKey(0)
     if k == 27:
         cv.destroyAllWindows()
-
+![Annotated the contour](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/3.png)
 ```
 4.Segmet Multi-digit to individual digits and on the same time resize them
 ```python
