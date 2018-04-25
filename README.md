@@ -150,6 +150,9 @@ def imageprepare(path):
     return res
 
 ```
+
+![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/7.png)
+
 ![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/5.png)
 
 ![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/6.png)
