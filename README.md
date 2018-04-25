@@ -47,7 +47,7 @@ def annotate_contour(img,thres):
         cv.destroyAllWindows()
 
 ```
-4.Segmet Multi-digit to individual digits and on the same time resize it
+4.Segmet Multi-digit to individual digits and on the same time resize them
 ```python
 def divide(img,thres):
     #------------------------divide digit----------------------------------------------------
