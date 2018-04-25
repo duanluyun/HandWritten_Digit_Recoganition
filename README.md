@@ -16,7 +16,7 @@ Assigning each pixel to a value of the range of monochromatic shades from black 
 (2)Binarise image:
 Assigning each pixel to only two possible colors typically black and white.
 
-```
+```python
 def preprocessing(img):
     # -------------------preprocessing---------------------------
     gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
