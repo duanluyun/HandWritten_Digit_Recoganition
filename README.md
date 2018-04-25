@@ -48,10 +48,11 @@ def annotate_contour(img,thres):
     k = cv.waitKey(0)
     if k == 27:
         cv.destroyAllWindows()
+```
 
 ![Annotated the contour](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/3.png)
 
-```
+
 4.Segmet Multi-digit to individual digits and on the same time resize them
 ```python
 def divide(img,thres):
