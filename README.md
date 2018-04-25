@@ -12,6 +12,7 @@ Usually, the recognition of the segmented digits is an easier task compared to s
 
 (1)Convert image to grayscale :
 Assigning each pixel to a value of the range of monochromatic shades from black to white to represent its amount of light.
+
 (2)Binarise image:
 Assigning each pixel to only two possible colors typically black and white.
 
