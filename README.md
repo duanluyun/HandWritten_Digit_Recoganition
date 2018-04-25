@@ -9,6 +9,7 @@ Usually, the recognition of the segmented digits is an easier task compared to s
 
 
 2.preprocessint the image
+
 (1)Convert image to grayscale :
 Assigning each pixel to a value of the range of monochromatic shades from black to white to represent its amount of light.
 (2)Binarise image:
