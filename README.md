@@ -134,7 +134,7 @@ newH = w // 2 - h // 2
 imgEmpty = Image.new('L', (w, w), 0)
 imgEmpty.paste(im, (newH, 0))
 imageResize = imgEmpty.resize((28, 28), Image.ANTIALIAS)
-***
+-------------------------------------------------------------------------------------------------
 def imageprepare(path):
     res=[]
     file_list=os.listdir(path)
