@@ -160,13 +160,30 @@ def imageprepare(path):
 
 ## HandWritten Digit Recoganition(CNN)
 
-# 1.
+### (1)Sort the image in the directory
+### (2)get the data of the image
+### (3)reshape it to [1,784]
+```python
+def imageprepare(path):
+    res=[]
+    file_list=os.listdir(path)
+    file_list.sort()
+    file_name=[path+"/"+i for i in file_list]
+    for n in file_name:
+        im = Image.open(n).convert('L')
+        tv = list(im.getdata())
+        tva = [(255-x)*1.0/255.0 for x in tv]
+        res.append(tva)
+    return res
+
+
+```
 
 ## HandWritten Digit Recoganition(SVM)
 
 ## Steps:
 
-# 1.load the Original dataset
+### 1.load the Original dataset
 ```python
 if __name__=='__main__':
     pddata_train=pd.read_csv('.....',header=None)
@@ -197,7 +214,7 @@ if __name__=='__main__':
 
 ![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/5.png)
 
-# 2.Uses classical SVM with RBF kernel. The drawback of this solution is rather long training on big datasets, although the accuracy with good parameters is high.The accuracy is 98.27%
+### 2.Uses classical SVM with RBF kernel. The drawback of this solution is rather long training on big datasets, although the accuracy with good parameters is high.The accuracy is 98.27%
 
 ```python
  clf=SVC(C=1,kernel='rbf',gamma=0.001)
