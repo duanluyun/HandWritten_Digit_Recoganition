@@ -162,9 +162,9 @@ def imageprepare(path):
 
 ## Steps:
 
-### (1)Sort the image in the directory
-### (2)get the data of the image
-### (3)reshape it to [1,784]
+### (1)Sort images in the directory
+### (2)get data from each image
+### (3)reshape it to 1*784
 ```python
 def imageprepare(path):
     res=[]
