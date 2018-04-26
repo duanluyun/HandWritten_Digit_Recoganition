@@ -195,4 +195,24 @@ if __name__=='__main__':
 
 #2.Uses classical SVM with RBF kernel. The drawback of this solution is rather long training on big datasets, although the accuracy with good parameters is high.The accuracy is 98.27%
 
+```python
+ clf=SVC(C=1,kernel='rbf',gamma=0.001)
+    clf.fit(x_train,y_train.values.ravel())
+    y_hat=clf.predict(x_test)
+    accuracy=accuracy_score(y_test,y_hat)
+    print('the accuracy is %f'%(accuracy) )
+    plt.figure(figsize=(100,50))
+    y_hat_err=y_hat[y_hat!=y_test.values.ravel()]
+    y_test_err=y_test[y_hat!=y_test.values.ravel()].values.ravel()
+    err_images=images_test[y_hat!=y_test.values.ravel()]
+
+    for index,err_image in enumerate(err_images):
+
+        plt.subplot(4,8,index+1)
+        plt.imshow(err_image,cmap=plt.cm.gray_r,interpolation='nearest')
+        plt.title('y_hat=%d, y=%d'%(y_hat_err[index],y_test_err[index]))
+
+
+```
+
 ![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/6.png)
