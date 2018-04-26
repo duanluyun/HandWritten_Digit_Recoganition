@@ -160,6 +160,8 @@ def imageprepare(path):
 
 ## HandWritten Digit Recoganition(CNN)
 
+## Steps:
+
 ### (1)Sort the image in the directory
 ### (2)get the data of the image
 ### (3)reshape it to [1,784]
