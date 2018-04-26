@@ -158,6 +158,10 @@ def imageprepare(path):
 
 ![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/7.png)
 
+## HandWritten Digit Recoganition(CNN)
+
+# 1.
+
 ## HandWritten Digit Recoganition(SVM)
 
 ## Steps:
