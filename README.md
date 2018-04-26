@@ -20,6 +20,10 @@ In this work we focused on two classifiers.Convolutional Neural Network(CNN) and
 
 9.opencv_python=3.3.0
 
+10.pandas
+
+11.matplotlib
+
 
 ## HandWritten Multi-digit String Segmentation
 Usually, the recognition of the segmented digits is an easier task compared to segmentation and recognition of a multi-digit string.  In this work, we will use opencv  segment a handwritten multi-digit string image and recognize the segmented digits.
@@ -127,6 +131,7 @@ def sort(conts):
     return conts
 
 ```
+
 6.Add black border to each digit, this increases the accuracy of classification
 ```python
 h, w = im.size
@@ -153,6 +158,41 @@ def imageprepare(path):
 
 ![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/7.png)
 
+## HandWritten Digit Recoganition(SVM)
+
+##Steps:
+
+# 1.load the Original dataset
+```python
+if __name__=='__main__':
+    pddata_train=pd.read_csv('.....',header=None)
+    pddata_test=pd.read_csv('......',header=None)
+    x_train=pddata_train.loc[:,pddata_train.columns!=64]
+    y_train=pddata_train.loc[:,pddata_train.columns==64]
+
+    x_train=np.array(x_train)
+    images_train=x_train.reshape([-1,8,8])
+
+    x_test= pddata_test.loc[:, pddata_train.columns != 64]
+    y_test = pddata_test.loc[:, pddata_train.columns == 64]
+
+    x_test = np.array(x_test)
+    images_test = x_test.reshape([-1, 8, 8])
+    plt.figure(figsize=(100,50))
+    for index,image in enumerate(images_train[:16]):
+        plt.subplot(4,8,index+1)
+        plt.imshow(image,cmap=plt.cm.gray_r,interpolation='nearest')
+        plt.title('the ture number is %d'%(y_train.loc[index]))
+    for index,image in enumerate(images_test[:16]):
+        plt.subplot(4,8,index+17)
+        plt.imshow(image,cmap=plt.cm.gray_r,interpolation='nearest')
+        plt.title('the true number is %d'%(y_test.loc[index]))
+    plt.show()
+
+```
+
 ![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/5.png)
+
+#2.Uses classical SVM with RBF kernel. The drawback of this solution is rather long training on big datasets, although the accuracy with good parameters is high.The accuracy is 98.27%
 
 ![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/6.png)
