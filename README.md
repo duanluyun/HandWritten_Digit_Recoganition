@@ -160,7 +160,7 @@ def imageprepare(path):
 
 ## HandWritten Digit Recoganition(SVM)
 
-##Steps:
+## Steps:
 
 # 1.load the Original dataset
 ```python
@@ -193,7 +193,7 @@ if __name__=='__main__':
 
 ![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/5.png)
 
-#2.Uses classical SVM with RBF kernel. The drawback of this solution is rather long training on big datasets, although the accuracy with good parameters is high.The accuracy is 98.27%
+# 2.Uses classical SVM with RBF kernel. The drawback of this solution is rather long training on big datasets, although the accuracy with good parameters is high.The accuracy is 98.27%
 
 ```python
  clf=SVC(C=1,kernel='rbf',gamma=0.001)
