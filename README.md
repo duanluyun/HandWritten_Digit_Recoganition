@@ -237,5 +237,6 @@ if __name__=='__main__':
 
 
 ```
+### The error classification from the test dataset
 
 ![gray Image](https://github.com/duanluyun/HandWritten_Digit_Recoganition/raw/master/Image/6.png)
