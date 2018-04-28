@@ -177,9 +177,29 @@ def imageprepare(path):
         tva = [(255-x)*1.0/255.0 for x in tv]
         res.append(tva)
     return res
-
-
 ```
+
+### (4)Recoganize the digit with CNN(based on the mnist dataset)
+
+You can see the details in LeNet_inference.py and LeNet_train.py
+
+### (5) get the original digit
+```python
+def connect(p):
+    n=len(p)
+    i=-1
+    wq=1
+    sum=0
+    while i>=-n:
+        tmp=wq*p[i]
+        sum+=tmp
+        i-=1
+        wq=wq*10
+    print("recognize result:")
+    print(sum)
+    return sum
+```
+
 
 ## HandWritten Digit Recoganition(SVM)
 
